@@ -1,11 +1,11 @@
 {
 
-        "intro":"Dear User, there has been detected movement in your house, would you like to proceed? (type PROCEED or NOTHING)",
+        "intro":"Dear User, there has been detected movement in your house, would you like to proceed? (type PROCEED or NOTHING) at any time, you can type RESET to reset sensors and watch for movement",
         "pictures?":"Start taking pictures? (y/n)",
         "policeactivecamera?":"Camera and Sensors are now active. Call Police? (y/n)",
         "policenoactivecamera?":"Only Sensors are now active. Call Police? (y/n)",
         "nopolicenocamera":"Not Calling Police. Sensors are now active. Please Proceed",
-        "exit":"Thanks! have a nice day! Login to your account to activate camera if needed",
+        "exit":"Thanks! have a nice day! Login to your account to activate camera if needed. Type RESET to reactivate sensor",
         "nopolicecamera":"Not Calling Police. Camera and sensors are now acrive. Please Proceed",
         "police":"Calling Police, please proceed"
   
