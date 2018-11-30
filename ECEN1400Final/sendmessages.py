@@ -1,27 +1,46 @@
-import os
+import json
 
-from credentials import account_sid, auth_token, my_twilio, my_cell
-from twilio.rest import Client
+with open("messages.json") as json_content:
+    data = json.load(json_content)
 
+messageDefault = "I'm sorry, please enter a valid command"
 
-class PhoneAccount:
+class Responder:
+    def __init__(self):
+        self.currentMessage = data['intro']
+    
     
 
-    def __init__(self, account, token, number):
-        self.account_sid = account
-        self.auth_token = token
-        self.number = number
-        self.client = Client(account_sid, auth_token)
+    def findResponse(self, input):
+        if(input == "PROCEED"):
+            self.currentMessage = data['pictures?']
 
-    def sendMessage(self, _message, recipient):
-        message = self.client.messages \
-                    .create(
-                        body = _message,
-                        from_ = self.number,
-                        to = recipient
-                    )
-        print('Message sent from' , self.number , ' to ' , recipient , '. Content: ' , _message)
+            #function turn on arduino
+        elif(input == "NOTHING"):
+            self.currentMessage = data['exit']
 
+        elif(input == "y" and self.currentMessage == data['pictures?']):
+            self.currentMessage = data['policeactivecamera?']
+            #activate camera
+        elif(input == "y" and self.currentMessage == data['policeactivecamera?']):
+            self.currentMessage = data['police']
+            #call police function
+            #abort
+        elif(input == "n" and self.currentMessage == data['policeactivecamera?']):
+            self.currentMessage = data['nopolicecamera']
+            #call police function
+            #abort
+        elif(input == "n" and self.currentMessage == data['pictures?']):
+            self.currentMessage = data['policenoactivecamera?']
+        elif(input == "y" and self.currentMessage == data['policenoactivecamera?']):
+            self.currentMessage = data['police']
+            #call police
+            #abort
+        elif(input == "n" and self.currentMessage == data['policenoactivecamera?']):
+            self.currentMessage = data['nopolicenocamera']
+            #abort
 
-myAccount = PhoneAccount(account_sid, auth_token, my_twilio)
-myAccount.sendMessage('hi there!', my_cell)
+    
+        #send text with defaultMessage
+
+response = Responder()
