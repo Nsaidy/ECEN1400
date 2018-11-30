@@ -5,7 +5,6 @@ with open("messages.json") as json_content:
 
 messageDefault = "I'm sorry, please enter a valid command"
 
-
 class Responder:
     def __init__(self):
         self.currentMessage = data['intro']
@@ -13,11 +12,12 @@ class Responder:
 
     def findResponse(self, input):
         if(input == "PROCEED"):
-            print("hi")
             self.currentMessage = data['pictures?']
 
             #function turn on arduino
-
+        elif(input == "NOTHING"):
+            self.currentMessage = data['exit']
+        
         elif(input == "y" and self.currentMessage == data['pictures?']):
             self.currentMessage = data['policeactivecamera?']
             #activate camera
@@ -38,11 +38,11 @@ class Responder:
         elif(input == "n" and self.currentMessage == data['policenoactivecamera?']):
             self.currentMessage = data['nopolicenocamera']
             #abort
-        print(self.currentMessage)
+
     
         #send text with defaultMessage
 
-Responder ex = Responder()
+def abort():
 
 
 
