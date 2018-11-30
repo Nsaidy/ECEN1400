@@ -1,5 +1,9 @@
 ### ECEN1400
 
+## Progress
+Current code - send and recieve works with python, the automated convo is not perfect yet, trying to make it object oriented
+
+
 ## How to use this app
 This app can be used on a public website, however, we used ngrok to tunnel to our own local host ports
 
