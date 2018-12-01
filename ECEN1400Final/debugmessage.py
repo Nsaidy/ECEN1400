@@ -41,8 +41,49 @@ class Responder:
 
     
         #send text with defaultMessage
+#for debugging - a set series of responses to the text messages
 
-def abort():
+sequence1 = ["PROCEED", "y", "y"]
+sequence2 = ["PROCEED", "y", "n"]
+sequence3 = ["PROCEED", "n", "y"]
+sequence4 = ["PROCEED", "n", "n"]
+sequence5 = ["NOTHING"]
+
+def test(sequence):
+    response = Responder()
+    print(response.currentMessage)
+    for command in sequence:
+        print(command)
+        print("")
+        response.findResponse(command)
+        print(response.currentMessage)
+    response = Responder()
+
+print("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
+print("")
+print("**************************************************")
+print("")
+test(sequence1)
+print("")
+print("**************************************************")
+print("")
+test(sequence2)
+print("")
+print("**************************************************")
+print("")
+test(sequence3)
+print("")
+print("**************************************************")
+print("")
+test(sequence4)
+print("")
+print("**************************************************")
+print("")
+test(sequence5)
+print("")
+print("**************************************************")
+print("")
+print("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
 
 
 
