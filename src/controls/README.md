@@ -1,19 +1,19 @@
-#Controls
+# Controls
 
-##transistorcamera.ino
+## transistorcamera.ino
 
 Runs on the arduino (must open using arduino IDE). This code runs through checking the status of the serial every  time it goes through the loop.
 
-###Serial = DSDC
+### Serial = DSDC
 Deactivate system deactivate camera
 
-###Serial = ASDC
+### Serial = ASDC
 Activate system deactivate camera
 
 
-###Serial = ASAC
+### Serial = ASAC
 Activate system activate camera
 
 
-###commandmotionsensor
+### commandmotionsensor
 Runs through checking each sensor. If the sensor is active, it  adds the value that cooresponds to the servo's position at that sensor to value. At the end it averages value and writes it to servo
