@@ -70,7 +70,7 @@ void loop() {
   //turn the camera off no matter what
   //put it here to leave a slight gap just in case
 
- 
+  myservo.write(98);
 }
 
 

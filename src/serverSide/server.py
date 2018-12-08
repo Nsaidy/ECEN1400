@@ -33,7 +33,6 @@ ser = serial.Serial(port , baudrate=9600, bytesize=8, parity=serial.PARITY_NONE,
 #start an app
 app = Flask(__name__)
 
-
 _status = "Deactivated"
 _htmlstatus = False
 
