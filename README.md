@@ -1,6 +1,7 @@
 ### ECEN1400
 
-
+##Structure
+I used python virtual environment to make this. So that is what pyenv.cfg is. all the necessary packages are installed
 
 ## How to use this app
 This app assumes you have a local computer running a public server. As of now, it does not upload serial data to a website so it cannot be used with a server like firebase or azure. This is an easy fix, just allow the server of your choice access to usb data. We didn't do this because  in the future we would like to use a webhook based framework like Autobahn.
