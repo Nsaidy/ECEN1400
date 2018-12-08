@@ -8,7 +8,9 @@ This app assumes you have a local computer running a public server. As of now, i
 To start the bot, you need to plug in the arduino to the processor. Make  sure you know which usb it is connected to. For pis, this is /dev/ttyUSB# where # is the number of the usb (this is all down to your computer) you can change this directly in server.py.
 
 To continue, if you haven't already done so, upload transistorcamera.ino to the arduino (you need Arduino IDE to do this). Once the arduino is set up, all you have to do is run server.py. This will set up a local website on port 5000 (/localhost:5000) you need to make this public. I did this using ngrok. Merely run the command
+	
 	$ ngrok http 5000
+
 This will list an http and https url. This URL is your home page of the app (index.html). Right now, the website will be running fine. You can turn on or off the camera at will on the temporary site. However, to get sms functionality, you'll notice there is a /sms/ POST request on server.py. This is the url you need to supply  to twilio. Once you changed account sid and account key in server.py, you need to change twilio's default webhook sms url to the https://#######.ngrok.io/sms usrl that ngrok supplied (or another url if you are using a different application). IMPORTANT, add /sms to the end of the url. /sms/ is  the webapp  that processes the information and sends the user back a text.
 
 ## Required packages
