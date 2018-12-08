@@ -4,7 +4,8 @@ import os
 from twilio.rest import Client
 
 
-#my key and sid
+account_sid = "AC05303a6c1508f0ac96a3e547fbf76e67"
+auth_token = "37da334b83f43c19617db3fb4346a1e8"
 my_twilio = "17207073308"
 my_cell = "13034781391"
 
