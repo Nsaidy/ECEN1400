@@ -24,6 +24,8 @@ The camera is a very tricky part of the code primarily because it is not a nativ
 ## Problems / future
 Right now, there are a lot of small problems. These are mainly  from an experienced software developer's point of view. We would like to make this website completely public. To do this, we would need account information so that everyone isn't running the same camera. We just started changing our code  to an object oriented design, however, the OO nature could be worked with.
 
+For future use, our goal was to run this program using a Raspberry Pi for the purposes of portability for projects. Such a task should be fairly simple to do, as the program doesn't require much processing power.
+
 ## Arduino pins
 This project assumes a two line camera, that is only two wires are used for the camera, they are hooked up across the switch so that if one is high and the other is low, the camera is passive, but when they are both low  or high, the camera takes a picture. Of  course in the future, we would use a serial camera such as the OV760, but the arduino would need an external timer to impliment this.
 Pin A0 --> Motionsensor output1
